@@ -4,6 +4,9 @@ bower_components/
 dist
 !lib/.gitkeep
 lib
+!docs/public
+!docs/docco.css
+docs/
 coverage
 
 [._]*.s[a-w][a-z]

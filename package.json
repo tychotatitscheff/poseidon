@@ -42,6 +42,9 @@
     "webpack-dev-server": "^1.8.2"
   },
   "dependencies": {
-    "invariant": "^2.0.0"
+    "invariant": "^2.0.0",
+    "modernizr": "^3.0.0-alpha.4",
+    "radium": "^0.13.4",
+    "react": "^0.14.0-beta1"
   }
 }

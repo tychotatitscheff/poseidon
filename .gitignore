@@ -7,7 +7,9 @@ lib
 !docs/public
 !docs/docco.css
 docs/
-coverage
+coverage/
+
+.babel-cache/
 
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]

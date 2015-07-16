@@ -56,6 +56,9 @@ class Base extends Component {
        console.log('state', stateDiff);
      }
    }
+  render() {
+    return <div/>;
+  }
 }
 
 export default Base;

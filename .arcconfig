@@ -1,0 +1,11 @@
+{
+  "phabricator.uri" : "https://artemis-tracker.amrezal.atels.info/",
+  "repository.callsign": "POS",
+  "load" : [
+    "utils/karma_test_engine"
+  ],
+  "unit.engine" : "KarmaTestEngine",
+  "unit.karma.config" : "karma.conf.js",
+  "unit.karma.junit" : "coverage/Chrome_43.0.2357_(Linux_0.0.0).xml",
+  "unit.karma.coverage" : "karma.coverage"
+}

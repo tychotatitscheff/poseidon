@@ -1,16 +1,21 @@
 import React from 'react';
-import { TestUtils } from 'react/addons';
-import expect from 'chai';
+import reactDOM from 'react-dom';
+let ReactTestUtils= require('react/lib/ReactTestUtils');
+import { expect } from 'chai';
 
-import Base from '../src/base.js';
+let Base = require('../src/base');
 
 describe('Base', () => {
-  let menu = TestUtils.renderIntoDocument(
+  let base = ReactTestUtils.renderIntoDocument(
     <Base/>
   );
-  let menuElem = React.findDOMNode(menu);
+  let baseElem = reactDOM.findDOMNode(base);
 
-  it('Renders the menu items', () => {
-    expect(menuElem.querySelectorAll('li').length).to.equal(2);
+  it('It should render an div', () => {
+    expect(baseElem.nodeName).to.equal('DIV');
+  });
+
+  it('It Should be empty', () => {
+    expect(baseElem.innerHTML).to.equal('');
   });
 });

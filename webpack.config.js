@@ -1,5 +1,3 @@
-'use strict';
-
 var webpack = require('webpack');
 
 var plugins = [
@@ -21,16 +19,24 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel-loader'],
-      exclude: /node_modules/
-    }]
-  },
   output: {
-    library: 'library-boilerplate',
+    library: 'PoseidonUi',
     libraryTarget: 'umd'
+  },
+  externals: [
+    {
+      "react": {
+        root: "React",
+        commonjs2: "react",
+        commonjs: "react",
+        amd: "react"
+      }
+    }
+  ],
+  module: {
+    loaders: [
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel?loose=all' }
+    ]
   },
   plugins: plugins,
   resolve: {

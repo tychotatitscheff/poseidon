@@ -36,7 +36,6 @@
     "eslint": "^0.23",
     "eslint-config-airbnb": "0.0.6",
     "eslint-plugin-react": "^2.3.0",
-    "expect": "^1.6.0",
     "isparta": "^3.0.3",
     "karma": "^0.12.31",
     "karma-firefox-launcher": "^0.1.6",
@@ -47,13 +46,17 @@
     "mocha": "^2.2.5",
     "rimraf": "^2.3.4",
     "sinon": "^1.15.4",
+    "slimerjs": "^0.9.5",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.8.2"
   },
   "dependencies": {
+    "immutable": "^3.7.4",
+    "immutablediff": "^0.4.2",
     "invariant": "^2.0.0",
     "modernizr": "^3.0.0-alpha.4",
     "radium": "^0.13.4",
-    "react": "^0.14.0-beta1"
+    "react": "^0.14.0-beta1",
+    "react-pure-render": "^1.0.2"
   }
 }

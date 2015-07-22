@@ -2,6 +2,7 @@ import React from 'react';
 import reactDOM from 'react-dom';
 let ReactTestUtils= require('react/lib/ReactTestUtils');
 import { expect } from 'chai';
+import {it, describe} from 'mocha';
 
 let Base = require('../src/abstract/base');
 

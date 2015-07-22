@@ -3,7 +3,7 @@ import reactDOM from 'react-dom';
 let ReactTestUtils= require('react/lib/ReactTestUtils');
 import { expect } from 'chai';
 
-let Base = require('../src/base');
+let Base = require('../src/abstract/base');
 
 describe('Base', () => {
   let base = ReactTestUtils.renderIntoDocument(

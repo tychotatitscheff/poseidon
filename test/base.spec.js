@@ -2,13 +2,13 @@ import React from 'react';
 import reactDOM from 'react-dom';
 let ReactTestUtils= require('react/lib/ReactTestUtils');
 import { expect } from 'chai';
-import {it, describe} from 'mocha';
+import { it, describe } from 'mocha';
 
-let Base = require('../src/abstract/base');
+let BaseComponent = require('../src/abstract/base');
 
-describe('Base', () => {
+describe('BaseComponent', () => {
   let base = ReactTestUtils.renderIntoDocument(
-    <Base/>
+    <BaseComponent/>
   );
   let baseElem = reactDOM.findDOMNode(base);
 

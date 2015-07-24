@@ -1,0 +1,14 @@
+[ignore]
+.*/examples/.*
+.*/lib/.*
+.*/dist/.*
+.*/docs/.*
+
+[include]
+.*/node_modules/react/.*
+
+[libs]
+src/index.js
+
+[options]
+suppress_comment=\\(.\\|\n\\)*\\$FlowDisable

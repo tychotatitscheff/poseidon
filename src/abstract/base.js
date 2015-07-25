@@ -4,7 +4,7 @@
 // Shamelessly taken from https://github.com/este/este/blob/master/src/client/components/component.react.js
 
 import React, { Component } from 'react';
-import shallowEqual from '../../node_modules/react-pure-render/shallowEqual';
+import shallowEqual from 'react-pure-render/shallowEqual';
 
 var diff; // eslint-disable-line no-var
 if (process.env.NODE_ENV === 'development') {

@@ -4,8 +4,10 @@ import Radium from 'radium';
 import React, { Component } from 'react';
 
 
-/*::;`*/@Radium/*::;`*/
+// $FlowDisable
+@Radium
 class Col extends Component {
+  // $FlowDisable
   static propsType = {
     xs: React.PropTypes.int,
     sm: React.PropTypes.int.isRequired,

@@ -1,20 +1,9 @@
 /* @flow */
 
-import Radium from 'radium';
+import radium from 'radium';
 import React, { Component } from 'react';
 
-
-// $FlowDisable
-@Radium
 class Col extends Component {
-  // $FlowDisable
-  static propsType = {
-    xs: React.PropTypes.int,
-    sm: React.PropTypes.int.isRequired,
-    md: React.PropTypes.int,
-    lg: React.PropTypes.int
-  };
-
   static colCountToPerc(colCount: number): string {
     if (colCount) {
       return ( colCount / 12 ) * 100 + '%';
@@ -23,7 +12,17 @@ class Col extends Component {
 
   render() {
     let {xs=1, sm, md=sm, lg=md, ...other} = this.props;
+    return (<div>Test</div>);
   };
 }
+
+Col.propTypes = {
+  xs: React.PropTypes.number,
+  sm: React.PropTypes.number.isRequired,
+  md: React.PropTypes.number,
+  lg: React.PropTypes.number
+};
+
+Col = radium(Col);
 
 export default Col;

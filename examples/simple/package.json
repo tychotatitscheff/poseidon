@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/tychotatitscheff/poseidon-ui",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.14.0-beta1"
   },
   "devDependencies": {
     "poseidon-ui": "^0.1.0",

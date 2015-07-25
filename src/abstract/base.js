@@ -1,9 +1,9 @@
 /* @flow */
-/* eslint-disable no-console */
+/* eslint-disable no-console, no-var, vars-on-top */
 
 // Shamelessly taken from https://github.com/este/este/blob/master/src/client/components/component.react.js
 
-import React, { Component } from 'react';
+import React from 'react';
 import shallowEqual from 'react-pure-render/shallowEqual';
 
 var diff; // eslint-disable-line no-var
@@ -15,7 +15,7 @@ type State = { // eslint-disable-line block-scoped-var
   fileContent: string;
 }
 
-class BaseComponent extends Component {
+class BaseComponent extends React.Component {
 
   // In order to provide optimisation we are going to make base components be pure render.
   // Hence we are going to use react-pure-render from Dan Abramov
@@ -24,30 +24,30 @@ class BaseComponent extends Component {
   shouldComponentUpdate(nextProps: {filePath: string;}, nextState: ?State): bool {
     // Custom pure render if the components has a router context
     if (this.context.router) {
-      let changed = this.pureComponentLastPath !== this.context.router.getCurrentPath();
+      var changed = this.pureComponentLastPath !== this.context.router.getCurrentPath();
       this.pureComponentLastPath = this.context.router.getCurrentPath();
       if (changed) return true;
     }
     // Call react-pure-render in order to see if react should update
-    let shouldUpdate =
+    var shouldUpdate =
       !shallowEqual(this.props, nextProps) ||
       !shallowEqual(this.state, nextState);
 
 
     // This will be only loaded in DEV
     if (shouldUpdate && process.env.NODE_ENV === 'development') {
-      this._logShouldUpdateComponents(nextProps, nextState);
+      this.logShouldUpdateComponents(nextProps, nextState);
     }
 
     return shouldUpdate;
   }
 
    // Helper to check which component was changed and why.
-   logShouldUpdateComponents(nextProps: {filePath: string;}, nextState? : State) {
-     let name = this.constructor.displayName || this.constructor.name;
+   logShouldUpdateComponents(nextProps: {filePath: string;}, nextState: ?State) {
+     var name = this.constructor.displayName || this.constructor.name;
      console.log(`${name} shouldUpdate`);
-     let propsDiff = diff(this.props, nextProps).toJS();
-     const stateDiff = diff(this.state, nextState).toJS();
+     var propsDiff = diff(this.props, nextProps).toJS();
+     var stateDiff = diff(this.state, nextState).toJS();
      if (propsDiff.length) {
        console.log('props', propsDiff);
      }

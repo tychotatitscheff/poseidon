@@ -1,11 +1,12 @@
+/* @flow */
+
 import React, { Component } from 'react';
-import { Grid } from 'poseidon-ui';
-let { Col } = Grid;
+import { Col } from '../../../lib/index';
 
 export default class App extends Component {
   render() {
     return (
-      <Col />
+      <Col sm={6}/>
     );
   }
 }

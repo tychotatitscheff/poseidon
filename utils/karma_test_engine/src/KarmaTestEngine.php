@@ -58,7 +58,7 @@ final class KarmaTestEngine extends ArcanistUnitTestEngine {
     }
     $flags[] = '--reporters='.implode(',', $reporters);
 
-    $future = id(new ExecFuture('CONTINUOUS_INTEGRATION=true karma start %Ls %s', $flags, $config))
+    $future = id(new ExecFuture('CONTINUOUS_INTEGRATION=true PHANTOMJS=true karma start %Ls %s', $flags, $config))
       ->setCWD($this->getWorkingCopy()->getProjectRoot());
     return $future;
   }

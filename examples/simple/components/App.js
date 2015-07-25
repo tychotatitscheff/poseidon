@@ -6,7 +6,14 @@ import { Col } from '../../../lib/index';
 export default class App extends Component {
   render() {
     return (
-      <Col sm={6}/>
+      <div style={{}}>
+        <Col sm={6}>
+          test
+        </Col>
+        <Col sm={6}>
+          test2
+        </Col>
+      </div>
     );
   }
 }

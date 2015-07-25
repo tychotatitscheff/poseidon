@@ -1,6 +1,6 @@
 {
   "name": "poseidon-ui",
-  "version": "0.1.4",
+  "version": "0.1.9",
   "description": "An UI to rules them all !",
   "main": "lib/index.js",
   "scripts": {
@@ -71,6 +71,7 @@
     "yargs": "^3.15.0"
   },
   "dependencies": {
+    "immutable": "^3.7.4",
     "immutablediff": "^0.4.2",
     "radium": "^0.13.4",
     "react": "^0.14.0-beta1",

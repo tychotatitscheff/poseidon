@@ -1,17 +1,17 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { Col, Row } from '../../../lib/index';
+import { Col, Row } from '../../../src/index';
 
 export default class App extends Component {
   render() {
     return (
-      <Row>
-        <Col sm={6}>
-          test
+      <Row xsAlign="around">
+        <Col xs={9}>
+          <div style={{'background-color': 'red'}}> Test </div>
         </Col>
-        <Col sm={6}>
-          test2
+        <Col xs={3}>
+          <div style={{'background-color': 'blue'}}> Test </div>
         </Col>
       </Row>
     );

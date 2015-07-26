@@ -1,6 +1,13 @@
 /* @flow */
 /* eslint-disable block-scoped-var */
 
-export Component from './abstract/base';
-export Col from './base/grid/col';
-export Row from './base/grid/row';
+
+import Component from './abstract/base';
+import Col from './base/col';
+import Row from './base/row';
+
+module.exports = {
+  Component: Component,
+  Col: Col,
+  Row: Row
+};
